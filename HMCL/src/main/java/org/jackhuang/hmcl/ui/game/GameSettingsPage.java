@@ -238,7 +238,7 @@ public final class GameSettingsPage<S extends GameSettings> extends StackPane
                         javaCustomSelector,
                         GameSettings::customJavaPathProperty);
                 if (OperatingSystem.CURRENT_OS == OperatingSystem.WINDOWS)
-                    javaCustomSelector.getExtensionFilters().add(new FileChooser.ExtensionFilter(i18n("settings.game.java_directory"), "java.exe", "javaw.exe"));
+                    javaCustomSelector.getExtensionFilters().add(new FileChooser.ExtensionFilter(i18n("settings.game.java_directory"), "*java.exe", "*javaw.exe"));
 
                 holder.add(FXUtils.onWeakChangeAndOperate(JavaManager.getAllJavaProperty(), allJava -> {
                     var options = new ArrayList<RadioChoiceList.Choice<@Nullable Pair<@Nullable JavaVersionType, @Nullable JavaRuntime>>>();
