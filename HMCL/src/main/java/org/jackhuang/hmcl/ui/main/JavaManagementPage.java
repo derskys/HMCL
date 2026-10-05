@@ -112,7 +112,7 @@ public final class JavaManagementPage extends ListPageBase<JavaRuntime> {
 
     void onAddJava() {
         FileChooser chooser = new FileChooser();
-        if (OperatingSystem.CURRENT_OS == OperatingSystem.WINDOWS){
+        if (OperatingSystem.CURRENT_OS == OperatingSystem.WINDOWS) {
             chooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Java", "java.exe"));
             chooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Javaw", "javaw.exe"));
         }
