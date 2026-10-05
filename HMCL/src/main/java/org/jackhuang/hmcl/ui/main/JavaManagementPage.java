@@ -114,6 +114,7 @@ public final class JavaManagementPage extends ListPageBase<JavaRuntime> {
         FileChooser chooser = new FileChooser();
         if (OperatingSystem.CURRENT_OS == OperatingSystem.WINDOWS)
             chooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Java", "java.exe"));
+            chooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Javaw", "javaw.exe"));
         chooser.setTitle(i18n("settings.game.java_directory.choose"));
         Path file = Controllers.showOpenDialog(chooser);
         if (file != null) {
